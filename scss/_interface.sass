@@ -1,0 +1,29 @@
+body
+    +light
+    font-size: 13px
+    & a,
+    h2,
+    & h4,
+    & p,
+    & span
+        color: $text-color
+        text-decoration: none
+.underline
+    position: relative
+    &-alternative, &-text
+        position: relative
+    &-alternative::before, &-text::before
+        content: ""
+        position: absolute
+        width: 100%
+        bottom: -10px
+        right: 0
+        height: 1px
+        transition: 0.2s
+        transform: scaleX(0)        
+    &-alternative::before
+        background-color: $alternative-text-color
+    &-text::before
+        background-color: $text-color   
+    &-alternative:hover::before, &-text:hover::before
+            transform: scaleX(1)

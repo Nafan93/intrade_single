@@ -1,1 +1,2 @@
-# intrade_single
+# Intrade
+
